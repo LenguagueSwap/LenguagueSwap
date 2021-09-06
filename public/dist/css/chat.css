@@ -1,0 +1,142 @@
+
+.windows-chat {
+    margin-left: auto;
+    /* background-color: #c0c0c082; */
+    background-image: url("../../img/wallpaper5.png");
+    background-size: contain;
+    color: black;
+    height: 70vh;
+    padding: 10px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 3px 3px 30px 9px #000000;
+}
+
+.send-message{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    width: 97%;
+}
+
+.input-msg{
+    box-shadow: 1px 3px 5px rgb(0 0 0 / 50%);
+    width: 72%;
+}
+.btn-message{
+    margin: 0 5px;
+    border-radius: 5px;
+    box-shadow: 1px 3px 5px rgb(0 0 0 / 50%);
+    width: 24%;
+}
+.user-same{
+    color: indigo;
+    font-family: 'Nunito';
+    font-size: small;
+}
+.user-other {
+    color: navy;
+    font-family: 'Nunito';
+    font-size: small;
+}
+.msg-same{
+    background-color: rgb(225, 228, 220);
+    color: black;
+    padding: 0 5px;
+    border-radius: 5px;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin-inline-start: auto;
+    box-shadow: 1px 3px 5px rgb(0 0 0)
+}
+.msg-other{
+    background-color: rgb(225, 228, 220);
+    color: black;
+    padding: 0 5px;
+    border-radius: 5px;
+    width: fit-content;
+    width: -moz-fit-content;
+    box-shadow: 1px 3px 5px rgb(0 0 0)
+}
+
+.main-room{
+    margin: 5% auto;
+}
+
+.boxChat{
+    height: 90%;
+    padding: 0px 2.5%;
+    overflow-y:auto;
+    overflow-x: auto;
+    width: 73%;
+    display: inline-block;
+}
+
+.boxChat::-webkit-scrollbar{
+    width: 8px;
+}
+
+.boxChat::-webkit-scrollbar-thumb{
+    background-color: rgba(225, 228, 220, .4);
+    border-radius: 5px;
+}
+
+.boxChat::-webkit-scrollbar-corner{
+    background-color:transparent;
+}
+
+.side-panel{
+    height: 90%;
+    padding: 0px 2.5%;
+    overflow-y:auto;
+    overflow-x: auto;
+    width: 24%;
+    display: inline-block;
+    border-radius: 5px;
+    background: hsl(0deg 12% 94% / 10%);
+}
+
+.side-panel::-webkit-scrollbar{
+    width: 8px;
+}
+
+.side-panel::-webkit-scrollbar-thumb{
+    background-color: rgba(225, 228, 220, .4);
+    border-radius: 5px;
+}
+
+.side-panel::-webkit-scrollbar-corner{
+    background-color:transparent;
+}
+
+.target-user{
+    text-align: center;
+    align-items: center;
+    background: cornflowerblue;
+    border-radius: 15px;
+    margin: 5px 0px;
+}
+
+.itemAction{
+    display: flex;
+    color: cadetblue;
+    padding: 0 10px;
+    width: 100%;
+    background-color: #000000;
+    font-size: medium;
+    font-family: monospace;
+    font-weight: bold;
+    padding: 3px 10px;
+    box-shadow: 1px 3px 5px rgb(88 89 91);
+}
+
+.userCounter{
+    background-color: #0000007d;
+    color: #5f9ea0;
+    font-family: monospace;
+    justify-content: center;
+    display: flex;
+    margin: 2px 0px;
+    width: auto;
+    align-items: center;
+}

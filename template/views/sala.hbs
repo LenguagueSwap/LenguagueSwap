@@ -1,0 +1,109 @@
+{{>header}}
+<div class="row main-room">
+    {{{mostrar}}}
+    {{!-- Help tools. --}}
+    <div class="col-md-6" style="margin-bottom: 5%;">
+        <div class="col-12">
+            <h2 class="text-center toolsTitle">Help tools</h2>
+        </div>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                        Translator
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        {{!-- translator --}}
+                        <div class="row traductor-content" style="margin: auto 5%;">
+                            <div class="col-12" style="display: flex; justify-content: center; margin: 2% auto;">
+                                <form id="formChange"><button class="btn btn-primary" type="button"
+                                        id="changeLanguage"><i class="fas fa-exchange-alt"></i></button></form>
+                            </div>
+                            <div class="col-6">
+                                <form id="translate">
+                                    <input class="text-center" id="fromLanguage" type="text" style="width: 100%;"
+                                        value="Spanish" readonly><br>
+
+                                    <textarea name="" id="texto" cols="20" rows="3"
+                                        style="color: #212529; display: block; width: 100%;"
+                                        placeholder="Write here"></textarea>
+                                    <br>
+                                    <div class="btn-modal">
+                                        <button type="submit"
+                                            class="btn btn-outline-success texte-center">Translate</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="col-6">
+                                <form id="formTraduction">
+                                    <input class="text-center" id="toLanguage" type="text" style="width: 100%;"
+                                        value="English" readonly><br>
+                                    <textarea name="" id="traduction" cols="20" rows="3"
+                                        style="color: #212529; display: block; width: 100%;" placeholder="Traduction"
+                                        readonly></textarea>
+                                    <br>
+                                    <div class="btn-modal">
+                                        <button class="btn btn-outline-secondary" type="button"
+                                            id="clear">Clear</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        How to introduce myself
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine
+                        this being filled with some actual content.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        How to ask and answer
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more
+                        exciting happening here in terms of content, but just filling up the space to make it look, at
+                        least at first glance, a bit more representative of how this would look in a real-world
+                        application.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    {{!-- chat --}}
+    <div id="windows-chat" class="col-md-6 windows-chat">
+        <div id="boxChat" class="boxChat">
+            <div id="chatActions" style="position: absolute;"></div>
+        </div>
+        <div id="sidePanel" class="side-panel"></div>
+        <form action="" id="formulario" class="send-message">
+            <input type="text" class="form-control" id="usuario" value="{{user._id}}" style="display:none;">
+            <input type="text" class="form-control" id="nameUser" value="{{user.nickname}}" style="display:none;">
+            <input type="text" placeholder="Write a message" class="form-control input-msg" id="message">
+            <button type="submit" class="btn-message">Send</button>
+        </form>
+    </div>
+</div>
+
+{{>footer}}
